@@ -28,6 +28,7 @@ Amber::Server.configure do
   end
 
   routes :web do
+  resources "tasks", TaskController
     get "/", HomeController, :index
   end
 
