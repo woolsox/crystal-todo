@@ -5,5 +5,6 @@ class Task < Granite::Base
   primary id : Int64
   field task : String
   field description : String
+  field status : String, default: "Incomplete"
   timestamps
 end
