@@ -30,6 +30,7 @@ Amber::Server.configure do
   routes :web do
   resources "tasks", TaskController
     get "/", HomeController, :index
+    patch "/tasks/:id", TaskController, :toggle_completion
   end
 
   routes :api do

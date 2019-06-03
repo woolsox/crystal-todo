@@ -47,6 +47,11 @@ class TaskController < ApplicationController
     redirect_to action: :index, flash: {"success" => "Deleted task successfully."}
   end
 
+  def toggle_completion
+    task.set_attribute(:status, "Complete")
+    redirect_to action: :index, flash: {"success" => "Update Task status successfully."}
+  end
+
   private def task_params
     params.validation do
       required :task

@@ -22,4 +22,4 @@
               == link_to("Show", "/tasks/#{task.id}", class: "btn btn-info btn-sm")
               == link_to("Edit", "/tasks/#{task.id}/edit", class: "btn btn-success btn-sm")
               == link_to("Delete", "/tasks/#{ task.id }?_csrf=#{csrf_token}", "data-method": "delete", "data-confirm": "Are you sure?", class: "btn btn-danger btn-sm")
-              == link_to("Toggle Completion", "", "data-method": "delete", "data-confirm": "Are you sure this task is complete?", class: "btn btn-toggle btn-sm")
+              == link_to("Toggle Completion", "/tasks/#{task.id}", "data-method": "patch", "data-confirm": "Are you sure this task is complete?", class: "btn btn-toggle btn-sm")
